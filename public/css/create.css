@@ -1,0 +1,39 @@
+label,
+input {
+    display: block;
+    margin: 0;
+}
+
+input {
+    width: 100%;
+}
+
+.create {
+    width: 400px;
+}
+
+.wrap-title {
+    position: relative;
+    text-align: center;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) rotateZ(180deg);
+    width: 20px;
+    height: 20px;
+}
+
+.wrap-input {
+    margin: 3px 0;
+}
+
+.button {
+    text-align: center;
+}
+.button button {
+    margin: 10px 0;
+    width: 100%;
+}
