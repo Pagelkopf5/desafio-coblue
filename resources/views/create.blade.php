@@ -42,11 +42,19 @@
         </div>
         <div class="wrap-input half col-6">
             <label>Data de Contato</label>
+            @if($contato->data_contato != null)
             <input type="text" name="data_contato" value={{old('data_contato', $contato->data_contato->format('d/m/Y'))}}>
+            @else
+            <input type="text" name="data_contato">
+            @endif
         </div>
         <div class="wrap-input half col-6">
             <label>Data de Validade</label>
+            @if($contato->data_contato != null)
             <input id="dataVal" type="text" name="data_validade" value={{old('data_validade', $contato->data_validade->format('d/m/Y'))}}>
+            @else
+            <input id="dataVal" type="text" name="data_validade">
+            @endif
         </div>
         <div class="button col-12">
         @if($contato->id == null)
@@ -90,7 +98,7 @@
                 success: function(response) {
                     alert("Operação realizada com sucesso!");
                     console.log(response);
-                    //window.location.replace(response);
+                    window.location.replace(response);
                 }
             });
         }
